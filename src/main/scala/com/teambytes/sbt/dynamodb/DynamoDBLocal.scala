@@ -96,6 +96,7 @@ object DynamoDBLocal extends AutoPlugin {
           pid
         }.getOrElse {
           // This is ok - it just means that DynamoDB isn't running, most likely because it was never started. :-)
+          streamz.log.info(s"Cannot find dynamodb local PID")
           "0"
         }
     },
